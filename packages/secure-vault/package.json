@@ -12,7 +12,8 @@
     "test": "jest --coverage"
   },
   "dependencies": {
-    "@nexus/shared": "workspace:*"
+    "@nexus/shared": "workspace:*",
+    "crypto": "builtin"
   },
   "devDependencies": {
     "typescript": "^5.3.3",

@@ -1,5 +1,6 @@
-// Secure Vault exports - Placeholder for Phase 4
-export const SECURE_VAULT = {
-  version: '0.0.1',
-  status: 'phase-4-pending',
-};
+export { SecureVault } from './vault/SecureVault';
+export { CryptoManager, type EncryptionResult } from './crypto/CryptoManager';
+export { KeyStore, type KeyEntry } from './key-management/KeyStore';
+export { AuthManager, type Credentials } from './auth/AuthManager';
+export { AuditLog, type AuditEntry } from './audit/AuditLog';
+export { AnomalyDetector, type AnomalyAlert } from './anomaly/AnomalyDetector';
