@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@nexus/core": ["packages/core/src"],
+      "@nexus/communication": ["packages/communication/src"],
+      "@nexus/agent-registry": ["packages/agent-registry/src"],
+      "@nexus/task-orchestrator": ["packages/task-orchestrator/src"],
+      "@nexus/neural-mesh": ["packages/neural-mesh/src"],
+      "@nexus/secure-vault": ["packages/secure-vault/src"],
+      "@nexus/insight-engine": ["packages/insight-engine/src"],
+      "@nexus/shared": ["packages/shared/src"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
+}

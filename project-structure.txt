@@ -1,0 +1,106 @@
+nexus-system/
+├── docs/
+│   ├── architecture/
+│   ├── api/
+│   ├── deployment/
+│   └── design-decisions.md
+├── packages/
+│   ├── core/
+│   │   ├── src/
+│   │   │   ├── index.ts
+│   │   │   ├── config/
+│   │   │   ├── state/
+│   │   │   ├── logger/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── communication/
+│   │   ├── src/
+│   │   │   ├── message-broker/
+│   │   │   ├── transport/
+│   │   │   ├── protocol/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── agent-registry/
+│   │   ├── src/
+│   │   │   ├── registry/
+│   │   │   ├── discovery/
+│   │   │   ├── reputation/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── task-orchestrator/
+│   │   ├── src/
+│   │   │   ├── orchestrator/
+│   │   │   ├── decomposer/
+│   │   │   ├── router/
+│   │   │   ├── state-machine/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── neural-mesh/
+│   │   ├── src/
+│   │   │   ├── mesh/
+│   │   │   ├── synchronization/
+│   │   │   ├── routing/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── secure-vault/
+│   │   ├── src/
+│   │   │   ├── crypto/
+│   │   │   ├── key-management/
+│   │   │   ├── auth/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   ├── insight-engine/
+│   │   ├── src/
+│   │   │   ├── analytics/
+│   │   │   ├── metrics/
+│   │   │   ├── dashboard/
+│   │   │   └── types/
+│   │   ├── tests/
+│   │   └── package.json
+│   └── shared/
+│       ├── src/
+│       │   ├── types/
+│       │   ├── constants/
+│       │   ├── utils/
+│       │   └── errors/
+│       └── package.json
+├── services/
+│   ├── nexus-core/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   ├── api-gateway/
+│   │   ├── src/
+│   │   ├── Dockerfile
+│   │   └── package.json
+│   └── test-harness/
+│       ├── src/
+│       └── package.json
+├── infrastructure/
+│   ├── docker-compose.yml
+│   ├── kubernetes/
+│   │   ├── base/
+│   │   ├── overlays/
+│   │   └── helm-charts/
+│   ├── terraform/
+│   └── scripts/
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       ├── test.yml
+│       └── deploy.yml
+├── root files
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── jest.config.js
+│   ├── .eslintrc.json
+│   ├── .prettier.json
+│   ├── pnpm-workspace.yaml
+│   ├── Makefile
+│   └── DEVELOPMENT_ROADMAP.md
