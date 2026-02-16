@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-config
+data:
+  config.json: |
+    {
+      "nodeId": "nexus-core",
+      "environment": "production",
+      "logLevel": "info",
+      "messagebroker": {
+        "type": "redis",
+        "url": "redis://redis-service:6379",
+        "options": {
+          "retryStrategy": 3,
+          "enableKeepAlive": true
+        }
+      },
+      "database": {
+        "url": "postgresql://postgres-service:5432/nexus",
+        "maxConnections": 20
+      },
+      "api": {
+        "port": 8080,
+        "host": "0.0.0.0"
+      },
+      "security": {
+        "enableEncryption": true,
+        "keyRotationInterval": 604800000
+      }
+    }

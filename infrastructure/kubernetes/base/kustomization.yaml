@@ -1,0 +1,33 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: nexus-base
+
+commonLabels:
+  app: nexus
+  version: v1
+
+commonAnnotations:
+  team: nexus-team
+
+resources:
+  - deployment.yaml
+  - service.yaml
+  - configmap.yaml
+
+replicas:
+  - name: nexus-core
+    count: 3
+
+images:
+  - name: nexus
+    newTag: latest
+
+vars:
+  - name: NEXUS_REPLICAS
+    objref:
+      kind: Deployment
+      name: nexus-core
+      apiVersion: apps/v1
+    fieldref:
+      fieldpath: spec.replicas
